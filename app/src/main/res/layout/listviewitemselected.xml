@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="75dp"
-    android:background="#aaaaaa">
+    android:background="#AAAAAAAA">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="?android:attr/selectableItemBackground">
 
-    <include layout="@layout/listitem"/>
+        <include layout="@layout/listitem"/>
 
-</RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,35 +1,20 @@
 package com.example.student1.allsaints;
 
-public class Saint implements Comparable<Saint> {
+import android.support.annotation.NonNull;
 
-    // Для того, чтобы экземпляры класса можно было отсортировать
-    // класс должен имплементить Comparable
-    @Override
-    public int compareTo(Saint o) {
-        return getName().compareTo(o.getName());
-    }
+public class Saint implements Comparable {
 
-    public String getName() {
-        return name;
-    }
 
-    public String getDob() {
-        return dob;
-    }
-
-    public String getDod() {
-        return dod;
-    }
+    private String name;
+    private String dob;
+    private String dod;
+    private float rating = 0f;
 
     public Saint(String name, String dob, String dod, float rating) {
         this.name = name;
         this.dob = dob;
         this.dod = dod;
         this.rating = rating;
-    }
-
-    public float getRating() {
-        return rating;
     }
 
     public void setName(String name) {
@@ -48,8 +33,24 @@ public class Saint implements Comparable<Saint> {
         this.rating = rating;
     }
 
-    private String name;
-    private String dob;
-    private String dod;
-    private float rating = 0f;
+    public String getName() {
+        return name;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public String getDod() {
+        return dod;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    @Override
+    public int compareTo(@NonNull Object o) {
+        return 0;
+    }
 }
